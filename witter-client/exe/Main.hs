@@ -20,17 +20,8 @@ import Client
 
 --------------------------------------------------------------------------------
 
-witterDocs :: API
-witterDocs = docs witterApi
-
-witterJS :: T.Text
-witterJS = jsForAPI witterApi $ jqueryWith defCommonGeneratorOptions {
-    urlPrefix = "http://localhost:8081"
-}
-
+-- | `main` is the main entry point of this application.
 main :: IO ()
-main = do 
-    T.writeFile "wwwroot/js/client.js" witterJS
-    writeFile "docs.md" (markdown witterDocs)
+main = return ()
 
 --------------------------------------------------------------------------------
