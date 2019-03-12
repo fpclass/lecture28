@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/client.js"></script>
+    </head>
+    <body>
+    </body>
+    <script>
+        $(document).ready(function () {
+           getWeets(function(weets) {
+               $.each(weets, function(i,v) { console.log(v); });
+           });
+        });
+    </script>
+</html>

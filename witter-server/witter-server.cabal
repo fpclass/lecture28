@@ -1,0 +1,33 @@
+cabal-version: 1.12
+
+name:           witter-server
+version:        1.0.0.0
+description:    Please see the README on GitHub at <https://github.com/fpclass/lecture28#readme>
+homepage:       https://github.com/fpclass/lecture28#readme
+bug-reports:    https://github.com/fpclass/lecture28/issues
+author:         Michael B. Gale
+maintainer:     m.gale@warwick.ac.uk
+copyright:      Copyright 2019 Michael B. Gale
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/fpclass/lecture28
+
+executable witter-server
+  hs-source-dirs:
+      exe
+  main-is: Main.hs
+  build-depends:
+      base >=4.7 && <5,
+      containers,
+      time,
+      wai,
+      warp,
+      servant,
+      servant-server,
+      witter-shared
+  default-language: Haskell2010
+  default-extensions:
+      OverloadedStrings
