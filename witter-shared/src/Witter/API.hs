@@ -22,7 +22,11 @@ import Witter.Util
 
 --------------------------------------------------------------------------------
 
+type WitterApi = "weets" :> Get '[JSON] [Weet]
+            :<|> "weet" :> Capture "weet" Int :> Get '[JSON] Weet 
 
+witterApi :: Proxy WitterApi 
+witterApi = Proxy
 
 --------------------------------------------------------------------------------
 

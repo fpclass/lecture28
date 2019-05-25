@@ -20,8 +20,16 @@ import Client
 
 --------------------------------------------------------------------------------
 
+witterDocs :: API 
+witterDocs = docs witterApi 
+
+witterJS :: T.Text 
+witterJS = jsForAPI witterApi jquery
+
 -- | `main` is the main entry point of this application.
 main :: IO ()
-main = return ()
+main = do 
+    writeFile "docs.md" (markdown witterDocs)
+    T.writeFile "client.js" witterJS
 
 --------------------------------------------------------------------------------
