@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 -- Functional Programming (CS141)                                             --
--- Lecture 28: Fun with type-level programming                                --
+-- Lecture: Fun with type-level programming                                   --
 --------------------------------------------------------------------------------
 
 module Client where 
@@ -24,7 +24,7 @@ witterEnv manager =
     
 -- | `runWitterClient` @action@ runs @action@ against the Witter API using a 
 -- new `Manager`.
-runWitterClient :: ClientM a -> IO (Either ServantError a)
+runWitterClient :: ClientM a -> IO (Either ClientError a)
 runWitterClient action = do 
     manager <- newManager defaultManagerSettings 
     runClientM action (witterEnv manager)

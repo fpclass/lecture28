@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 -- Functional Programming (CS141)                                             --
--- Lecture 28: Fun with type-level programming                                --
+-- Lecture: Fun with type-level programming                                   --
 --------------------------------------------------------------------------------
 
 module Witter.UserStore (
