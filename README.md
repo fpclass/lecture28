@@ -1,6 +1,6 @@
-# Lecture: Fun with type-level programming 
+# Lecture: Applied type-level programming 
 
-Code shown in the CS141 lecture titled "Fun with type-level programming". This repository contains an implementation of the infamous Witter coursework, but in Haskell. The project is split into three packages:
+Code shown in the CS141 lecture titled "Applied type-level programming". This repository contains an implementation of the infamous Witter coursework, but in Haskell. The project is split into three packages:
 
 ## witter-shared 
 
