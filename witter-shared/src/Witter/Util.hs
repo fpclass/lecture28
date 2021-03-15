@@ -3,6 +3,8 @@
 -- Lecture: Fun with type-level programming                                   --
 --------------------------------------------------------------------------------
 
+{-# LANGUAGE FlexibleInstances #-}
+
 -- | This module contains various utility functions, types, and type class 
 -- instances for other modules in the Witter application.
 module Witter.Util where
@@ -25,6 +27,9 @@ import System.IO
 import Servant.API
 
 --------------------------------------------------------------------------------
+
+instance MonadFail (Either Text) where
+    fail = Left . T.pack
 
 newtype Date = Date { getDate :: UTCTime }
     deriving (Eq, Ord, Show)
